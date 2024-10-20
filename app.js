@@ -5,6 +5,9 @@ const connectDB = require('./backend/db/connect');
 const express = require('express');
 const app = express(); 
 
+//3rd: use middleware to handle json data
+app.use(express.json());
+
 const port = process.env.PORT || 3000;
 const start = async () => {
    try {
