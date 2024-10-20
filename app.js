@@ -12,6 +12,10 @@ const errorHandlerMiddleware = require('./backend/middleware/error-handler');
 //3rd: use middleware to handle json data
 app.use(express.json());
 
+//5th: use middleware for error handling and not found
+app.use(notFound);
+app.use(errorHandlerMiddleware);
+
 const port = process.env.PORT || 3000;
 const start = async () => {
    try {
