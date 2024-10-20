@@ -5,6 +5,10 @@ const connectDB = require('./backend/db/connect');
 const express = require('express');
 const app = express(); 
 
+//4th: import middleware for error handling and not found
+const notFound = require('./backend/middleware/not-found');
+const errorHandlerMiddleware = require('./backend/middleware/error-handler');
+
 //3rd: use middleware to handle json data
 app.use(express.json());
 
