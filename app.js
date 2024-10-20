@@ -1,6 +1,9 @@
-//1st: connect to the database
 require('dotenv').config(); 
 const connectDB = require('./backend/db/connect');
+
+//2nd: require express and create app
+const express = require('express');
+const app = express(); 
 
 const port = process.env.PORT || 3000;
 const start = async () => {
