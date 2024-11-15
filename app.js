@@ -1,5 +1,6 @@
-require('dotenv').config(); 
-const connectDB = require('./backend/db/connect');
+ 
+const connectDB = require('./backend/db/connect.js');
+require('dotenv').config();
 
 //2nd: require express and create app
 const express = require('express');
